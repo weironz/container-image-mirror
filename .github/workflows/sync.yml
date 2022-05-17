@@ -3,9 +3,9 @@
 name: image-sync
 on:
   push:
-    branches: [ main ]
+    branches: [ calico ]
   pull_request:
-    branches: [ main ]
+    branches: [ calico ]
   schedule:
     - cron: '0 14 * * 1'
 
