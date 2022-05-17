@@ -3,9 +3,9 @@
 name: image-sync
 on:
   push:
-    branches: [ ceph ]
+    branches: [ main ]
   pull_request:
-    branches: [ ceph ]
+    branches: [ main ]
   schedule:
     - cron: '0 14 * * 1'
 
