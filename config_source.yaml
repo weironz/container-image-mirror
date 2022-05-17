@@ -3,9 +3,6 @@ auth:
     username: $USERNAME
     password: $PASSWORD
 images:
-  k8s.gcr.io/sig-storage/csi-node-driver-registrar: registry.cn-shenzhen.aliyuncs.com/cnmirror/csi-node-driver-registrar
-  quay.io/cephcsi/cephcsi: registry.cn-shenzhen.aliyuncs.com/cnmirror/csi-provisioner
-  k8s.gcr.io/sig-storage/csi-provisioner: registry.cn-shenzhen.aliyuncs.com/cnmirror/csi-provisioner
-  k8s.gcr.io/sig-storage/csi-attacher: registry.cn-shenzhen.aliyuncs.com/cnmirror/csi-attacher
-  k8s.gcr.io/sig-storage/csi-resizer: registry.cn-shenzhen.aliyuncs.com/cnmirror/csi-resizer
-  k8s.gcr.io/sig-storage/csi-snapshotter: registry.cn-shenzhen.aliyuncs.com/cnmirror/csi-snapshotter
+  docker.io/calico/cni: registry.cn-shenzhen.aliyuncs.com/cnmirror/cni
+  docker.io/calico/node: registry.cn-shenzhen.aliyuncs.com/cnmirror/node
+  docker.io/calico/kube-controllers: registry.cn-shenzhen.aliyuncs.com/cnmirror/kube-controllers
