@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: image-sync
 on:
   push:
@@ -25,9 +23,6 @@ jobs:
       run: |
         sudo apt install -y skopeo
         sudo skopeo --version
-        
-    - name: skopeo login
-      run: echo $PASSWORD | sudo skopeo login registry.cn-shenzhen.aliyuncs.com --username $USERNAME --password-stdin 
 
     - name: sync images
-      run: sudo skopeo sync --src yaml --dest docker sync.yaml registry.cn-shenzhen.aliyuncs.com/cnmirror
+      run: sudo skopeo sync --src yaml --dest docker sync.yaml registry.cn-shenzhen.aliyuncs.com/cnmirror --dest-username $USERNAME --dest-password $PASSWORD
