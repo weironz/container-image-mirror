@@ -23,7 +23,8 @@ jobs:
       run: |
         sudo apt install -y skopeo
         sudo skopeo --version
-        sudo skopeo -h
+        sudo skopeo sync -h
+        docker version
 
     - name: sync images
       run: sudo skopeo sync --src yaml --dest docker sync.yaml registry.cn-shenzhen.aliyuncs.com/cnmirror --dest-username $USERNAME --dest-password $PASSWORD
