@@ -10,13 +10,12 @@ on:
     - cron: '0 14 * * 1'
 
 env:
-  IMAGE_SYNCER_VERSION: v1.3.1
   USERNAME: ${{ secrets.ALIYUN_USERNAME }}
   PASSWORD: ${{ secrets.ALIYUN_PASSWORD }}
 
 jobs:
   image-sync:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout
@@ -29,7 +28,7 @@ jobs:
         skopeo --version
         
     - name: skopeo login
-      run: echo $USERNAME | skopeo login registry.cn-shenzhen.aliyuncs.com --username $PASSWORD --password-stdin 
+      run: echo $PASSWORD | skopeo login registry.cn-shenzhen.aliyuncs.com --username $USERNAME --password-stdin 
 
     - name: sync images
       run: skopeo sync --src yaml --dest docker sync.yaml registry.cn-shenzhen.aliyuncs.com/cnmirror/cni
