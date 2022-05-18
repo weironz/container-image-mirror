@@ -25,7 +25,7 @@ jobs:
     - name: install image-sync tool
       run: |
         cat /etc/os-release
-        apt install -y skopeo
+        sudo apt install -y skopeo
         skopeo --version
         
     - name: add sercret to file
