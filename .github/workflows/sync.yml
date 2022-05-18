@@ -29,7 +29,7 @@ jobs:
         skopeo --version
         
     - name: skopeo login
-      run: echo ${{ secrets.ALIYUN_USERNAME }} | skopeo login registry.cn-shenzhen.aliyuncs.com --username ${{ secrets.ALIYUN_PASSWORD }} --password-stdin 
+      run: echo $USERNAME | skopeo login registry.cn-shenzhen.aliyuncs.com --username $PASSWORD --password-stdin 
 
     - name: sync images
       run: skopeo sync --src yaml --dest docker sync.yaml registry.cn-shenzhen.aliyuncs.com/cnmirror/cni
