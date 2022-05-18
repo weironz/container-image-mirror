@@ -28,8 +28,8 @@ jobs:
         sudo apt install -y skopeo
         skopeo --version
         
-    - name: add sercret to file
-      run: envsubst < sync_source.yaml > sync.yaml
+    - name: skopeo login
+      run: echo ${{ secrets.ALIYUN_USERNAME }} | skopeo login registry.cn-shenzhen.aliyuncs.com --username ${{ secrets.ALIYUN_PASSWORD }} --password-stdin 
 
     - name: sync images
       run: skopeo sync --src yaml --dest docker sync.yaml registry.cn-shenzhen.aliyuncs.com/cnmirror/cni
