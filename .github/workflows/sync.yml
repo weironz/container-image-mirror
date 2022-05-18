@@ -23,12 +23,11 @@ jobs:
 
     - name: install image-sync tool
       run: |
-        cat /etc/os-release
         sudo apt install -y skopeo
         skopeo --version
         
     - name: skopeo login
-      run: echo $PASSWORD | skopeo login registry.cn-shenzhen.aliyuncs.com --username $USERNAME --password-stdin 
+      run: sudo echo $PASSWORD | skopeo login registry.cn-shenzhen.aliyuncs.com --username $USERNAME --password-stdin 
 
     - name: sync images
       run: skopeo sync --src yaml --dest docker sync.yaml registry.cn-shenzhen.aliyuncs.com/cnmirror/cni
