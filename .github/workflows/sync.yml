@@ -24,11 +24,12 @@ jobs:
 
     - name: install image-sync tool
       run: |
-        wget https://github.com/AliyunContainerService/image-syncer/releases/download/${IMAGE_SYNCER_VERSION}/image-syncer-${IMAGE_SYNCER_VERSION}-linux-amd64.tar.gz
-        tar -zxf image-syncer-${IMAGE_SYNCER_VERSION}-linux-amd64.tar.gz
+        cat /etc/os-release
+        apt install -y skopeo
+        skopeo --version
         
     - name: add sercret to file
-      run: envsubst < config_source.yaml > config.yaml
+      run: envsubst < sync_source.yaml > sync.yaml
 
     - name: sync images
-      run: ./image-syncer --proc=10 --config=config.yaml --retries=2
+      run: skopeo sync --src yaml --dest docker sync.yaml registry.cn-shenzhen.aliyuncs.com/cnmirror/cni
