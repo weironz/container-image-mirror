@@ -29,10 +29,7 @@ jobs:
 
     - name: sync images
       run: |
-        podman run -it --rm -v ${PWD}:/workspace -w /workspace \
-        quay.io/skopeo/stable:latest \
+        sudo podman run -it --rm -v ${PWD}:/workspace -w /workspace quay.io/skopeo/stable:latest \
         sync --src yaml --dest docker sync.yaml registry.cn-shenzhen.aliyuncs.com/cnmirror \
-        --dest-username $USERNAME \
-        --dest-password $PASSWORD \
-        --keep-going \
-        --retry-times 2
+        --dest-username $USERNAME --dest-password $PASSWORD \
+        --keep-going --retry-times 2
