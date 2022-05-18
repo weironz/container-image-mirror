@@ -27,7 +27,7 @@ jobs:
         skopeo --version
         
     - name: skopeo login
-      run: sudo echo $PASSWORD | skopeo login registry.cn-shenzhen.aliyuncs.com --username $USERNAME --password-stdin 
+      run: echo $PASSWORD | sudo skopeo login registry.cn-shenzhen.aliyuncs.com --username $USERNAME --password-stdin 
 
     - name: sync images
       run: skopeo sync --src yaml --dest docker sync.yaml registry.cn-shenzhen.aliyuncs.com/cnmirror
