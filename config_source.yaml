@@ -1,8 +1,0 @@
-auth:
-  registry.cn-shenzhen.aliyuncs.com:
-    username: $USERNAME
-    password: $PASSWORD
-images:
-  docker.io/calico/cni: registry.cn-shenzhen.aliyuncs.com/cnmirror/cni
-  docker.io/calico/node: registry.cn-shenzhen.aliyuncs.com/cnmirror/node
-  docker.io/calico/kube-controllers: registry.cn-shenzhen.aliyuncs.com/cnmirror/kube-controllers
