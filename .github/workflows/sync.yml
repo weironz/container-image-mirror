@@ -1,9 +1,9 @@
 name: image-sync
 on:
   push:
-    branches: [ calico ]
+    branches: [ kubevirt ]
   pull_request:
-    branches: [ calico ]
+    branches: [ kubevirt ]
   schedule:
     - cron: '0 14 * * 1'
 
