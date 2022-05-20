@@ -1,5 +1,6 @@
-docker.io:
+registry.k8s.io:
     images-by-tag-regex:
-        calico/cni: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
-        calico/node: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
-        calico/kube-controllers: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+        sig-storage/csi-provisioner: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+        sig-storage/livenessprobe: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+        sig-storage/nfsplugin: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+        sig-storage/csi-node-driver-registrar: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
