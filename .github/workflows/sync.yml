@@ -1,9 +1,9 @@
 name: image-sync
 on:
   push:
-    branches: [ calico ]
+    branches: [ csi-driver-nfs ]
   pull_request:
-    branches: [ calico ]
+    branches: [ csi-driver-nfs ]
   schedule:
     - cron: '0 14 * * 1'
 
