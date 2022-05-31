@@ -3,3 +3,4 @@ docker.io:
         calico/cni: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
         calico/node: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
         calico/kube-controllers: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+        calico/pod2daemon-flexvol: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
