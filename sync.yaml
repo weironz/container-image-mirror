@@ -1,12 +1,10 @@
 quay.io:
     images-by-tag-regex:
-        ceph/ceph-grafana: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
-        prometheus/prometheus: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
-        prometheus/node-exporter: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
-        prometheus/alertmanager: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
-quay.ceph.io:
+        cephcsi/cephcsi: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+k8s.gcr.io:
     images-by-tag-regex:
-        ceph-ci/ceph: master
-        ceph-ci/ceph: pacific
-        ceph-ci/ceph: quincy
-        ceph-ci/ceph: octopus
+        sig-storage/csi-node-driver-registrar: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+        sig-storage/csi-provisioner: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+        sig-storage/csi-attacher: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+        sig-storage/csi-resizer: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+        sig-storage/csi-snapshotter: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
