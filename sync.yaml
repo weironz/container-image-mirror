@@ -1,4 +1,3 @@
-k8s.gcr.io:
+quay.io:
     images-by-tag-regex:
-        metrics-server/metrics-server: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
-        sig-storage/nfs-subdir-external-provisioner: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+        ceph/ceph: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
