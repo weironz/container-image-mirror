@@ -1,9 +1,9 @@
 name: image-sync
 on:
   push:
-    branches: [ main ]
+    branches: [ ceph ]
   pull_request:
-    branches: [ main ]
+    branches: [ ceph ]
   schedule:
     - cron: '0 14 * * 1'
 
@@ -25,6 +25,6 @@ jobs:
     - name: sync images
       run: |
         sudo podman run -it --rm -v ${PWD}:/workspace -w /workspace quay.io/skopeo/stable:latest \
-        sync --src yaml --dest docker sync.yaml registry.cn-shenzhen.aliyuncs.com/cnmirror \
+        sync --src yaml --dest docker sync.yaml registry.cn-shenzhen.aliyuncs.com/cnregistry \
         --dest-username $USERNAME --dest-password $PASSWORD \
         --keep-going --retry-times 2
