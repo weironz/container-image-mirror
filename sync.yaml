@@ -6,3 +6,6 @@ k8s.gcr.io:
 registry.k8s.io:
     images-by-tag-regex:
         kube-state-metrics/kube-state-metrics: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+gcr.io:
+    images-by-tag-regex:
+        kaniko-project/executor: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
