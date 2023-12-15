@@ -10,4 +10,6 @@ gcr.io:
     images-by-tag-regex:
         kaniko-project/executor: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
         tekton-releases/github.com/tektoncd/pipeline/cmd/git-init: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
-        tekton-releases/github.com/tektoncd/pipeline/cmd/git-init: latest
+    images:
+        tekton-releases/github.com/tektoncd/pipeline/cmd/git-init:
+            - latest
