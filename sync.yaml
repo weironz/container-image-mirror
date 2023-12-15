@@ -13,3 +13,5 @@ gcr.io:
     images:
         tekton-releases/github.com/tektoncd/pipeline/cmd/git-init:
             - latest
+        kaniko-project/executor:
+            - latest
