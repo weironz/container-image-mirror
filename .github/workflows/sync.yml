@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: '0 14 * * 1'
+    - cron: '0 4 1 * *'
 env:
   USERNAME: ${{ secrets.ALIYUN_USERNAME }}
   PASSWORD: ${{ secrets.ALIYUN_PASSWORD }}
