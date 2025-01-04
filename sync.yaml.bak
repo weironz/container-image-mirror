@@ -1,0 +1,17 @@
+k8s.gcr.io:
+    images-by-tag-regex:
+        metrics-server/metrics-server: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+        sig-storage/nfs-subdir-external-provisioner: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+        ingress-nginx/kube-webhook-certgen: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+registry.k8s.io:
+    images-by-tag-regex:
+        kube-state-metrics/kube-state-metrics: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+gcr.io:
+    images-by-tag-regex:
+        kaniko-project/executor: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+        tekton-releases/github.com/tektoncd/pipeline/cmd/git-init: ^v([0-9]+\.){0,2}(\*|[0-9]+)$
+    images:
+        tekton-releases/github.com/tektoncd/pipeline/cmd/git-init:
+            - latest
+        kaniko-project/executor:
+            - latest
