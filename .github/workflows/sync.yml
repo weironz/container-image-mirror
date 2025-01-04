@@ -1,9 +1,7 @@
 name: image-sync
 on:
-  push:
-    branches: main
-  schedule:
-    - cron: '0 4 1 * *'
+  workflow_dispatch:
+
 env:
   USERNAME: ${{ secrets.ALIYUN_USERNAME }}
   PASSWORD: ${{ secrets.ALIYUN_PASSWORD }}
