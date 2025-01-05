@@ -4,3 +4,5 @@ docker.io:
             - v1.123.0
         altran1502/immich-machine-learning:
             - v1.123.0
+        mysql:
+            - 8.0.40
