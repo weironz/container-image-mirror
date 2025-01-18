@@ -8,3 +8,4 @@ docker.io:
             - 8.0.40
         headscale/headscale:
             - 0.24.0-beta.2-debug
+            - 0.24.0
