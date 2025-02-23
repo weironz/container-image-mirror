@@ -9,3 +9,5 @@ docker.io:
         headscale/headscale:
             - 0.24.0-beta.2-debug
             - 0.24.0
+        outlinewiki/outline:
+            - 0.82.0         
