@@ -2,8 +2,10 @@ docker.io:
     images:
         altran1502/immich-server:
             - v1.123.0
+            - v1.130.2
         altran1502/immich-machine-learning:
             - v1.123.0
+            - v1.130.2
         mysql:
             - 8.0.40
         headscale/headscale:
