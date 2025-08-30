@@ -1,6 +1,6 @@
 docker.io:
     images:
         altran1502/immich-server:
-            - v1.136.0
+            - v1.137.0
         altran1502/immich-machine-learning:
-            - v1.136.0      
+            - v1.137.0      
