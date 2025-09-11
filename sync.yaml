@@ -1,4 +1,4 @@
 mcr.microsoft.com:
     images:
-        mssql/server:
-            - 2019-latest
+        mssql-tools:
+            - latest
