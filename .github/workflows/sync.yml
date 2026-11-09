@@ -1,11 +1,6 @@
 name: image-sync
 on:
-  push:
-    branches: [ ceph-csi ]
-  pull_request:
-    branches: [ ceph-csi ]
-  schedule:
-    - cron: '0 14 * * 1'
+  workflow_dispatch: {}
 
 env:
   USERNAME: ${{ secrets.ALIYUN_USERNAME }}
