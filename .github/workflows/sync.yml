@@ -1,11 +1,6 @@
 name: image-sync
 on:
-  push:
-    branches: [ calico ]
-  pull_request:
-    branches: [ calico ]
-  schedule:
-    - cron: '0 14 * * 1'
+  workflow_dispatch: {}
 
 env:
   USERNAME: ${{ secrets.ALIYUN_USERNAME }}
